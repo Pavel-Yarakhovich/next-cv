@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 
-import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
 
 function NewMeetupForm(props) {
@@ -28,7 +27,7 @@ function NewMeetupForm(props) {
   }
 
   return (
-    <Card>
+    <div>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor='title'>Meetup Title</label>
@@ -55,7 +54,7 @@ function NewMeetupForm(props) {
           <button>Add Meetup</button>
         </div>
       </form>
-    </Card>
+    </div>
   );
 }
 
