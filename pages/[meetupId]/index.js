@@ -15,6 +15,7 @@ function MeetupDetails(props) {
         address={props.meetupData.address}
         description={props.meetupData.description}
       /> */}
+      <div>Meetup details page</div>
     </Fragment>
   );
 }
