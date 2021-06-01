@@ -1,13 +1,13 @@
 import { Flex, Square, Image, Stack, Button } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 
 function LeftColumn() {
   return (
     <Flex
-      direction={["row", null, "column"]}
-      justifyContent={["space-between", null, "start"]}
-      alignItems={["center", "stretch"]}
+      direction={["column", "row", "column"]}
+      justifyContent={["space-between", "space-around", "start"]}
+      alignItems={["center", null, "stretch"]}
+      mb={["3rem", 0]}
     >
       <Square size="200px" mb={4}>
         <Image
@@ -18,17 +18,34 @@ function LeftColumn() {
           mb="30px"
         />
       </Square>
-      <Stack>
-        <Button bg="#0e76a8" leftIcon={<FaLinkedin />}>
+      <Flex flexDirection={["row", "row", "column"]}>
+        <Button
+          as="a"
+          href="https://www.linkedin.com/in/pavel-yarohovich/"
+          bg="transparent"
+          border="2px solid #0e76a8"
+          borderRadius="0"
+          h="60px"
+          letterSpacing="0.1rem"
+          leftIcon={<FaLinkedin />}
+          mb={3}
+        >
           Linkedin
         </Button>
-        <Button bg="#211F1F" leftIcon={<FaGithub />}>
+        <Button
+          as="a"
+          href="https://github.com/Pavel-Yarakhovich"
+          bg="transparent"
+          border="2px solid #211F1F"
+          borderRadius="0"
+          h="60px"
+          letterSpacing="0.1rem"
+          leftIcon={<FaGithub />}
+          ml={["1rem", null, 0]}
+        >
           GitHub
         </Button>
-        <Button bg="#DB4437" leftIcon={<SiGmail />}>
-          Gmail
-        </Button>
-      </Stack>
+      </Flex>
     </Flex>
   );
 }
