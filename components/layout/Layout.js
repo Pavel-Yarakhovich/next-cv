@@ -7,19 +7,6 @@ function Layout(props) {
   return (
     <Fragment>
       <Head>
-        {/* <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-Regular.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-ExtraBold.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <style data-href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap"></style> */}
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap"

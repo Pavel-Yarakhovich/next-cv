@@ -13,8 +13,8 @@ function HomePage(props) {
   return (
     <Fragment>
       <Head>
-        <title>React Meetups</title>
-        <meta name="description" content="Test meta description." />
+        <title>P.Yarakhovich</title>
+        <meta name="description" content="Pavel Yarakhovich personal page." />
       </Head>
 
       <Flex
