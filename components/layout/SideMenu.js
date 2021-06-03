@@ -43,6 +43,10 @@ export function SideMenu() {
         color="green.200"
         letterSpacing="0.01rem"
         onClick={onOpen}
+        variant="outlined"
+        border="2px solid black"
+        borderRadius="0px"
+        p={6}
       >
         Contacts
       </Button>

@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
 import { Flex, Text, Box, Button, useOutsideClick } from "@chakra-ui/react";
 
-import Project from './ui/project';
-import ActiveProject from './ui/activeProject';
+import Project from "./ui/project";
+import ActiveProject from "./ui/activeProject";
+
+import { toolkitObj } from "../toolkit";
+import ActiveTool from "./ui/activeTool";
 
 const mockTools = [
   "React",
@@ -18,59 +21,39 @@ const mockTools = [
 
 const mockProjects = [
   {
-    title: "Test title",
+    title: "Roadside assistance",
     description:
       "Since my very childhood I’ve always been passionate about creating something either useful, nice-looking or tasty. This passion corresponds with my hobbies: drawing and cooking. The creation process itself gives me a great pleasure, but even more pleasure comes with the realization that the results of my work bring someone benefit or joy.",
-    duties: [
-      'first duty',
-      'second duty',
-      'third duty',
-    ],
-    tools: mockTools,
+    duties: ["first duty", "second duty", "third duty"],
+    tools: toolkitObj.slice(0, 3),
   },
   {
-    title: "Test title",
+    title: "Airways security",
     description:
       "Since my very childhood I’ve always been passionate about creating something either useful, nice-looking or tasty. This passion corresponds with my hobbies: drawing and cooking. The creation process itself gives me a great pleasure, but even more pleasure comes with the realization that the results of my work bring someone benefit or joy.",
-    duties: [
-      'first duty',
-      'second duty',
-      'third duty',
-    ],
-    tools: mockTools,
+    duties: ["first duty", "second duty", "third duty"],
+    tools: toolkitObj.slice(0, 6),
   },
   {
-    title: "Test title",
+    title: "Crypto mining manager",
     description:
       "Since my very childhood I’ve always been passionate about creating something either useful, nice-looking or tasty. This passion corresponds with my hobbies: drawing and cooking. The creation process itself gives me a great pleasure, but even more pleasure comes with the realization that the results of my work bring someone benefit or joy.",
-    duties: [
-      'first duty',
-      'second duty',
-      'third duty',
-    ],
-    tools: mockTools,
+    duties: ["first duty", "second duty", "third duty"],
+    tools: toolkitObj.slice(8, 14),
   },
   {
-    title: "Test title",
+    title: "Sherlock service",
     description:
       "Since my very childhood I’ve always been passionate about creating something either useful, nice-looking or tasty. This passion corresponds with my hobbies: drawing and cooking. The creation process itself gives me a great pleasure, but even more pleasure comes with the realization that the results of my work bring someone benefit or joy.",
-    duties: [
-      'first duty',
-      'second duty',
-      'third duty',
-    ],
-    tools: mockTools,
+    duties: ["first duty", "second duty", "third duty"],
+    tools: toolkitObj.slice(0, 12),
   },
   {
-    title: "Test title",
+    title: "Block-chained HR",
     description:
       "Since my very childhood I’ve always been passionate about creating something either useful, nice-looking or tasty. This passion corresponds with my hobbies: drawing and cooking. The creation process itself gives me a great pleasure, but even more pleasure comes with the realization that the results of my work bring someone benefit or joy.",
-    duties: [
-      'first duty',
-      'second duty',
-      'third duty',
-    ],
-    tools: mockTools,
+    duties: ["first duty", "second duty", "third duty"],
+    tools: toolkitObj.slice(10, 11),
   },
 ];
 
@@ -109,7 +92,12 @@ function Projects({ projects = mockProjects }) {
           {projects
             // .filter((item) => item !== activeTool)
             .map((item, idx) => (
-              <Project key={idx} project={item} handleClick={setActiveProject} />
+              <Project
+                key={idx}
+                project={item}
+                handleClick={setActiveProject}
+                isActive={item.title === activeProject.title}
+              />
             ))}
           {isHovered && !isNotified && (
             <Box

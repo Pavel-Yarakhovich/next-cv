@@ -9,6 +9,8 @@ import Presentation from "../components/presentation";
 import Toolkit from "../components/toolkit";
 import Projects from "../components/projects";
 
+import { toolkitObj } from '../toolkit';
+
 function HomePage(props) {
   return (
     <Fragment>
@@ -28,7 +30,7 @@ function HomePage(props) {
         <Presentation />
       </Flex>
 
-      <Toolkit />
+      <Toolkit tools={props.toolkit} />
       <Projects />
     </Fragment>
   );
@@ -69,6 +71,7 @@ export async function getStaticProps() {
         image: meetup.image,
         id: meetup._id.toString(),
       })),
+      toolkit: toolkitObj,
     },
     revalidate: 10, // in seconds
   };

@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 import { Box, Avatar, Text } from "@chakra-ui/react";
 
 function Tool(props) {
-
   return (
     <Box
-      bgGradient="linear(to-r, gray.100, gray.200)"
+      bgGradient={
+        props.isActive
+          ? "linear(to-r, gray.100, pink.500)"
+          : "linear(to-r, gray.100, gray.200)"
+      }
       borderRadius="36px"
       p={3}
       display="flex"
@@ -23,12 +26,12 @@ function Tool(props) {
       }}
     >
       <Avatar
-        size="md"
-        name="Kent Dodds"
-        src="https://bit.ly/kent-c-dodds"
-        mr={4}
+        size="sm"
+        name={props.tool.title}
+        src={props.tool.img}
+        mr={[2, 3, 4]}
       />
-      <Text>{props.tool}</Text>
+      <Text>{props.tool.title}</Text>
     </Box>
   );
 }

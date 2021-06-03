@@ -39,7 +39,7 @@ function Toolkit({ tools = mockTools }) {
         Toolkit
       </Text>
       <Flex direction={["column", null, "row"]} justifyContent="space-between">
-        <Box w={["100%", null, "35%"]} pr={4} mb={["1.5rem", null, 0]}>
+        <Box w={["100%", null, "40%"]} pr={4} mb={["1.5rem", null, 0]}>
           <ActiveTool tool={activeTool} />
         </Box>
         <Flex
@@ -49,11 +49,14 @@ function Toolkit({ tools = mockTools }) {
           justifyContent="start"
           position="relative"
         >
-          {tools
-            .filter((item) => item !== activeTool)
-            .map((item, idx) => (
-              <Tool key={idx} tool={item} handleClick={setActiveTool} />
-            ))}
+          {tools.map((item, idx) => (
+            <Tool
+              key={idx}
+              tool={item}
+              handleClick={setActiveTool}
+              isActive={item.title === activeTool.title}
+            />
+          ))}
           {isHovered && !isNotified && (
             <Box
               ref={ref}
@@ -74,7 +77,11 @@ function Toolkit({ tools = mockTools }) {
               borderBottomRightRadius="12px"
             >
               <Text mb={2}>Click to get more information.</Text>
-              <Button bg="none" border="1px solid white" onClick={() => setNotified(true)}>
+              <Button
+                bg="none"
+                border="1px solid white"
+                onClick={() => setNotified(true)}
+              >
                 Got it!
               </Button>
             </Box>

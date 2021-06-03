@@ -1,12 +1,16 @@
 import React from "react";
-import { Box, Avatar, Text, Flex } from "@chakra-ui/react";
+import { Box, Avatar, Text, Flex, Tooltip } from "@chakra-ui/react";
 
 function Project(props) {
   return (
     <Box w={["100%", "50%", "33%", "25%"]} p={2}>
       <Box
-        bgGradient="linear(to-r, gray.100, gray.200)"
-        borderRadius="36px"
+        bgGradient={
+          props.isActive
+            ? "linear(-45deg, yellow.500 25%, gray.100 75%)"
+            : "linear(to-r, gray.100, gray.200)"
+        }
+        borderRadius="12px"
         p={4}
         display="flex"
         flexDirection="column"
@@ -24,14 +28,15 @@ function Project(props) {
         </Text>
         <Flex flexWrap="wrap">
           {props.project.tools.map((tool) => (
-            <Avatar
-              key={tool}
-              size="sm"
-              name="Kent Dodds"
-              src="https://bit.ly/kent-c-dodds"
-              mr={4}
-              mb={4}
-            />
+            <Tooltip key={tool} label={tool.title}>
+              <Avatar
+                size="sm"
+                name={tool.title}
+                src={tool.url}
+                mr={2}
+                mb={2}
+              />
+            </Tooltip>
           ))}
         </Flex>
       </Box>
