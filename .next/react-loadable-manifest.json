@@ -1,4 +1,164 @@
 {
+  "../components/leftColumn": [
+    {
+      "id": "./components/leftColumn.js",
+      "file": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/react-icons/fa/index.esm.js",
+      "file": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
+      "file": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
+      "file": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
+      "file": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/index.js",
+      "file": "static/chunks/3.js"
+    }
+  ],
+  "../components/presentation": [
+    {
+      "id": "./components/presentation.js",
+      "file": "static/chunks/4.js"
+    }
+  ],
+  "../components/projects": [
+    {
+      "id": "./components/projects.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/ui/activeProject.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/ui/activeTool.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/ui/project.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/ui/tool.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-icons/fa/index.esm.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./toolkit.js",
+      "file": "static/chunks/1.js"
+    }
+  ],
+  "../components/toolkit": [
+    {
+      "id": "./components/toolkit.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./components/ui/activeTool.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./components/ui/tool.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/react-icons/fa/index.esm.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
+      "file": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/react-icons/lib/esm/index.js",
+      "file": "static/chunks/2.js"
+    }
+  ],
   "./dev/noop": [
     {
       "id": "./node_modules/next/dist/client/dev/noop.js",

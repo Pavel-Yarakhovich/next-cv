@@ -16,6 +16,8 @@ function LeftColumn() {
           borderRadius="full"
           mt="30px"
           mb="30px"
+          width="200px"
+          height="200px"
         />
       </Square>
       <Flex flexDirection={["row", "row", "column"]}>

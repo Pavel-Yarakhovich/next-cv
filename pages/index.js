@@ -3,13 +3,14 @@ import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 
 import { MongoClient } from "mongodb";
-
-import LeftColumn from "../components/leftColumn";
-import Presentation from "../components/presentation";
-import Toolkit from "../components/toolkit";
-import Projects from "../components/projects";
+import loadable from '@loadable/component';
 
 import { toolkitObj } from '../toolkit';
+
+const LeftColumn = loadable(() => import('../components/leftColumn'));
+const Presentation = loadable(() => import('../components/presentation'));
+const Toolkit = loadable(() => import('../components/toolkit'));
+const Projects = loadable(() => import('../components/projects'));
 
 function HomePage(props) {
   return (
