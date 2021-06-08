@@ -1,5 +1,4 @@
-import { Box, Avatar, Text, Flex, Tooltip } from "@chakra-ui/react";
-import { FaQuestionCircle } from "react-icons/fa";
+import { Box, Avatar, Text, Flex, Switch } from "@chakra-ui/react";
 
 function ActiveTool(props) {
   let color = "yellow.500";
@@ -20,11 +19,54 @@ function ActiveTool(props) {
       mr={2}
       color="green.300"
       fontWeight="700"
+      boxShadow="-5px -3px 12px #555, 3px 5px 15px #1a1a1a"
     >
       <Flex alignItems="center">
         <Avatar size="lg" name={props.tool.title} src={props.tool.img} mr={4} />
         <Text textTransform="uppercase" fontSize="26px">
           {props.tool.title}
+        </Text>
+      </Flex>
+
+      <Flex
+        flexDirection="column"
+        bg="gray.200"
+        ml="80px"
+        alignSelf="stretch"
+        p={3}
+        borderRadius="12px"
+      >
+        <Text fontWeight="700" letterSpacing="0.03rem" color="white">
+          Category:
+        </Text>
+        <Flex alignItems="center">
+          <Box bg="yellow.300" mr={3} w="14px" h="14px" borderRadius="50%" />
+          <Text
+            textTransform="lowerCase"
+            fontStyle="italic"
+            fontWeight="400"
+            color="white"
+          >
+            {props.tool.category}
+          </Text>
+        </Flex>
+      </Flex>
+      <Flex alignItems="center" pt={2} pl="80px" mb={4}>
+        <Switch
+          id="show-category-related-tools"
+          mr={2}
+          size="md"
+          colorScheme="green"
+          onChange={() => props.toggleByCategory(props.tool.category)}
+        />
+        <Text
+          textTransform="lowerCase"
+          fontStyle="italic"
+          fontWeight="400"
+          fontSize="0.7rem"
+          color="white"
+        >
+          Show only tools of this category
         </Text>
       </Flex>
       <Flex alignItems="center" fontWeight="400" pl="80px">

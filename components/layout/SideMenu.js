@@ -71,7 +71,7 @@ export function SideMenu() {
               or this email
             </Text>
             <CopyableText value="pavel.yarri@gmail.com" />
-            <Divider />
+            {/* <Divider />
             <Text mb={3}>or reach me with the form below</Text>
 
             <Stack spacing={3}>
@@ -86,7 +86,7 @@ export function SideMenu() {
               <Button onClick={sendMessage} variant="outline">
                 Send
               </Button>
-            </Stack>
+            </Stack> */}
           </DrawerBody>
 
           <DrawerFooter>

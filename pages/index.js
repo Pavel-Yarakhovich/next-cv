@@ -1,20 +1,19 @@
-import { Fragment } from "react";
+import React from "react";
 import Head from "next/head";
 import { Flex } from "@chakra-ui/react";
 
 import { MongoClient } from "mongodb";
-import loadable from '@loadable/component';
+import loadable from "@loadable/component";
 
-import { toolkitObj } from '../toolkit';
-
-const LeftColumn = loadable(() => import('../components/leftColumn'));
-const Presentation = loadable(() => import('../components/presentation'));
-const Toolkit = loadable(() => import('../components/toolkit'));
-const Projects = loadable(() => import('../components/projects'));
+const LeftColumn = loadable(() => import("../components/leftColumn"));
+const Presentation = loadable(() => import("../components/presentation"));
+const Toolkit = loadable(() => import("../components/toolkit"));
+const Projects = loadable(() => import("../components/projects"));
 
 function HomePage(props) {
+  const parRef = React.useRef(null);
   return (
-    <Fragment>
+    <React.Fragment>
       <Head>
         <title>P.Yarakhovich</title>
         <meta name="description" content="Pavel Yarakhovich personal page." />
@@ -27,13 +26,34 @@ function HomePage(props) {
         direction={["column", null, "row"]}
         mb={5}
       >
-        <LeftColumn />
+        <LeftColumn
+          inViewOptions={{
+            threshold: 0.3,
+            rootMargin: "0px",
+            root: parRef?.current,
+          }}
+        />
         <Presentation />
       </Flex>
 
-      <Toolkit tools={props.toolkit} />
-      <Projects />
-    </Fragment>
+      <Toolkit
+        tools={props.toolkit}
+        inViewOptions={{
+          threshold: 0.15,
+          rootMargin: "0px",
+          root: parRef?.current,
+          // triggerOnce: true,
+        }}
+      />
+      <Projects
+        projects={props.projects}
+        inViewOptions={{
+          threshold: 0.15,
+          rootMargin: "0px",
+          root: parRef?.current,
+        }}
+      />
+    </React.Fragment>
   );
 }
 
@@ -54,25 +74,40 @@ function HomePage(props) {
 export async function getStaticProps() {
   // fetch data from an API
   const client = await MongoClient.connect(
-    "mongodb+srv://Pasha:AQTc2sTLAD0jxa1w@node.lpsx9.mongodb.net/meetups?retryWrites=true&w=majority"
+    "mongodb+srv://Pasha:AQTc2sTLAD0jxa1w@node.lpsx9.mongodb.net/cv?retryWrites=true&w=majority"
   );
   const db = client.db();
 
-  const meetupsCollection = db.collection("meetups");
+  const toolsCollection = db.collection("tools");
+  const tools = await toolsCollection.find().toArray();
 
-  const meetups = await meetupsCollection.find().toArray();
+  const projectsCollection = db.collection("projects");
+  const projects = await projectsCollection.find().toArray();
+
+  const toolkit = tools.map((tool) => ({
+    id: tool._id.toString(),
+    category: tool.category,
+    title: tool.title,
+    projects: projects.filter((pr) =>
+      pr.tools.some((t) => t.toString() === tool._id.toString())
+    ).length,
+    level: tool.level,
+  }));
 
   client.close();
 
   return {
     props: {
-      meetups: meetups.map((meetup) => ({
-        title: meetup.title,
-        address: meetup.address,
-        image: meetup.image,
-        id: meetup._id.toString(),
+      toolkit,
+      projects: projects.map((p) => ({
+        id: p._id.toString(),
+        title: p.title,
+        description: p.description,
+        duties: p.duties,
+        tools: p.tools.map((t) =>
+          toolkit.find((tool) => tool.id === t.toString())
+        ),
       })),
-      toolkit: toolkitObj,
     },
     revalidate: 10, // in seconds
   };

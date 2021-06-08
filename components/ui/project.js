@@ -7,7 +7,7 @@ function Project(props) {
       <Box
         bgGradient={
           props.isActive
-            ? "linear(-45deg, yellow.500 25%, gray.100 75%)"
+            ? "linear(-45deg, yellow.300 25%, gray.100 75%)"
             : "linear(to-r, gray.100, gray.200)"
         }
         borderRadius="12px"
@@ -26,7 +26,7 @@ function Project(props) {
         <Text textTransform="uppercase" mb={3}>
           {props.project.title}
         </Text>
-        <Flex flexWrap="wrap">
+        <Flex flexWrap="wrap" justifyContent="center">
           {props.project.tools.map((tool) => (
             <Tooltip key={tool} label={tool.title}>
               <Avatar

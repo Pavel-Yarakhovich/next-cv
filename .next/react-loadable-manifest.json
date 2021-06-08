@@ -23,6 +23,10 @@
     {
       "id": "./node_modules/react-icons/lib/esm/index.js",
       "file": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/react-intersection-observer/react-intersection-observer.m.js",
+      "file": "static/chunks/3.js"
     }
   ],
   "../components/presentation": [
@@ -38,10 +42,6 @@
     },
     {
       "id": "./components/ui/activeProject.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./components/ui/activeTool.js",
       "file": "static/chunks/1.js"
     },
     {
@@ -77,10 +77,6 @@
       "file": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-icons/fa/index.esm.js",
-      "file": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/react-icons/lib/esm/iconBase.js",
       "file": "static/chunks/1.js"
     },
@@ -97,7 +93,11 @@
       "file": "static/chunks/1.js"
     },
     {
-      "id": "./toolkit.js",
+      "id": "./node_modules/react-icons/md/index.esm.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-intersection-observer/react-intersection-observer.m.js",
       "file": "static/chunks/1.js"
     }
   ],
@@ -139,23 +139,7 @@
       "file": "static/chunks/2.js"
     },
     {
-      "id": "./node_modules/react-icons/fa/index.esm.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/index.js",
+      "id": "./node_modules/react-intersection-observer/react-intersection-observer.m.js",
       "file": "static/chunks/2.js"
     }
   ],
