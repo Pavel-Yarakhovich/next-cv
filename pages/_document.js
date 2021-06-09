@@ -5,6 +5,21 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-FT6XWLL4HW"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FT6XWLL4HW', { page_path: window.location.pathname });
+            `,
+          }}
+        />
+
         <link
             rel="preconnect"
             href="https://fonts.gstatic.com"

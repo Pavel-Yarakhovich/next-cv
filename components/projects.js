@@ -20,7 +20,7 @@ function Projects({ projects = mockProjects, inViewOptions }) {
 
   return (
     <SlideFade in={inView} offsetY="-30px" ref={ref}>
-      <Flex direction="column">
+      <Flex direction="column" mb="3rem">
         <Text
           fontSize={["3xl", null, "4xl"]}
           textAlign="left"

@@ -9,6 +9,7 @@ const LeftColumn = loadable(() => import("../components/leftColumn"));
 const Presentation = loadable(() => import("../components/presentation"));
 const Toolkit = loadable(() => import("../components/toolkit"));
 const Projects = loadable(() => import("../components/projects"));
+const Certificates = loadable(() => import("../components/certificates.js"));
 
 function HomePage(props) {
   const parRef = React.useRef(null);
@@ -53,6 +54,8 @@ function HomePage(props) {
           root: parRef?.current,
         }}
       />
+      <Certificates />
+
     </React.Fragment>
   );
 }
