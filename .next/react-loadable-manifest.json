@@ -1,4 +1,10 @@
 {
+  "../components/certificates.js": [
+    {
+      "id": "./components/certificates.js",
+      "file": "static/chunks/4.js"
+    }
+  ],
   "../components/leftColumn": [
     {
       "id": "./components/leftColumn.js",
@@ -32,7 +38,7 @@
   "../components/presentation": [
     {
       "id": "./components/presentation.js",
-      "file": "static/chunks/4.js"
+      "file": "static/chunks/5.js"
     }
   ],
   "../components/projects": [
