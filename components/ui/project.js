@@ -28,7 +28,7 @@ function Project(props) {
         </Text>
         <Flex flexWrap="wrap" justifyContent="center">
           {props.project.tools.map((tool) => (
-            <Tooltip key={tool} label={tool.title}>
+            <Tooltip key={tool.id} label={tool.title}>
               <Avatar
                 size="sm"
                 name={tool.title}
