@@ -9,36 +9,38 @@ import {
   Image,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { SideMenu } from './SideMenu';
+import { SideMenu } from "./SideMenu";
 
-function MainNavigation() {
+function MainNavigation({ sections, visibleContent, selectContent }) {
   return (
-    <Flex bgGradient="linear(to-r, gray.100, gray.200)" p={4}>
-      <Container maxW="container.xl">
-        <Flex alignItems="center">
-          <Square>
+    <Flex bgGradient="linear(to-r, gray.100, gray.200)">
+      <Container maxW="container.xl" p="8px">
+        <Flex alignItems="center" flexDirection="column">
+          <Square mb={3}>
             <Image
               src="/logo.svg"
               alt="Pavel Yarakhovich"
               fit="cover"
-              width={50}
+              width="40px"
             />
           </Square>
-          <Spacer />
-          <Box>
-            {/* <Button colorScheme="whiteAlpha" variant="outline" color="white">
-              <Link href="/">All Meetups</Link>
-            </Button>
-            <Button
-              colorScheme="whiteAlpha"
-              variant="outline"
-              ml={4}
-              color="white"
-            >
-              <Link href="/new-meetup">Add New Meetup</Link>
-            </Button> */}
-            <SideMenu />
-          </Box>
+          <Flex flexDirection="column" gap="10px" justifySelf="center">
+            {sections &&
+              Object.entries(sections).map(([key, { icon: Icon }]) => (
+                <Button
+                  m="4px 0"
+                  p={0}
+                  fontSize="1.25rem"
+                  color={visibleContent === key ? "gray.100" : "yellow.500"}
+                  bg={visibleContent === key ? "green.200" : "gray.100"}
+                  key={key}
+                  onClick={() => selectContent(key)}
+                >
+                  <Icon />
+                </Button>
+              ))}
+          </Flex>
+          {/* <SideMenu /> */}
         </Flex>
       </Container>
     </Flex>

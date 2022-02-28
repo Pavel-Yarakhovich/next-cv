@@ -17,7 +17,7 @@ function Tool(props) {
             ? "linear(to-r, gray.100, pink.500)"
             : "linear(to-r, gray.100, gray.200)"
         }
-        borderRadius="36px"
+        borderRadius="0 36px 36px 0"
         p={3}
         display="flex"
         flexDirection="row"
@@ -26,6 +26,7 @@ function Tool(props) {
         mr={2}
         color="white"
         fontWeight="700"
+        transition="all 250ms ease"
         onClick={() => props.handleClick(props.tool)}
         _hover={{
           cursor: "pointer",
@@ -38,6 +39,7 @@ function Tool(props) {
           name={props.tool.title}
           src={props.tool.img}
           mr={[2, 3, 4]}
+          borderRadius="0"
         />
         <Text>{props.tool.title}</Text>
         {props.chosenCategory === props.tool.category && (

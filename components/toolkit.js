@@ -39,21 +39,14 @@ function Toolkit({ tools = mockTools, inViewOptions }) {
         >
           Toolkit
         </Text>
-        <Flex
-          direction={["column", null, "row"]}
-          justifyContent="space-between"
-        >
-          <Box
-            w={["100%", null, "40%"]}
-            pr={[0, null, 4]}
-            mb={["1.5rem", null, 0]}
-          >
+        <Flex direction={["column"]} justifyContent="space-between">
+          <Box w={["100%", null, "60%"]} pr={[0, null, 4]} mb={["1.5rem"]}>
             <ActiveTool tool={activeTool} toggleByCategory={handleToggle} />
           </Box>
           <Flex
             direction="row"
             flexWrap="wrap"
-            w={["100%", null, "60%"]}
+            w={["100%"]}
             justifyContent="start"
             position="relative"
             alignContent="flex-start"

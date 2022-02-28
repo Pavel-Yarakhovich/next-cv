@@ -5,6 +5,156 @@
       "file": "static/chunks/4.js"
     }
   ],
+  "../components/layout/MainNavigation.js": [
+    {
+      "id": "./components/layout/MainNavigation.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./components/layout/SideMenu.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./components/ui/copyableText.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/arrayWithHoles.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/asyncToGenerator.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/construct.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/nonIterableRest.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/slicedToArray.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/regenerator/index.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/link.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/normalize-trailing-slash.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/request-idle-callback.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/route-loader.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/router.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/use-intersection.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/client/with-router.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/mitt.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router-context.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/router.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/format-url.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/get-asset-path-from-route.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/querystring.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/resolve-rewrites-noop.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/lib/utils.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/dist/next-server/server/denormalize-page-path.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/next/link.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/react-icons/fa/index.esm.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./node_modules/regenerator-runtime/runtime.js",
+      "file": "static/chunks/6.js"
+    }
+  ],
   "../components/leftColumn": [
     {
       "id": "./components/leftColumn.js",
@@ -12,22 +162,6 @@
     },
     {
       "id": "./node_modules/react-icons/fa/index.esm.js",
-      "file": "static/chunks/3.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
-      "file": "static/chunks/3.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
-      "file": "static/chunks/3.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
-      "file": "static/chunks/3.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/index.js",
       "file": "static/chunks/3.js"
     },
     {
@@ -59,46 +193,6 @@
       "file": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-icons/lib/esm/index.js",
-      "file": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/react-icons/md/index.esm.js",
       "file": "static/chunks/1.js"
     },
@@ -118,30 +212,6 @@
     },
     {
       "id": "./components/ui/tool.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
       "file": "static/chunks/2.js"
     },
     {

@@ -1,18 +1,86 @@
 import React from "react";
 import Head from "next/head";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Container } from "@chakra-ui/react";
 
 import { MongoClient } from "mongodb";
 import loadable from "@loadable/component";
+
+import { BsPersonCircle, BsTools, BsFiles, BsStar } from "react-icons/bs";
 
 const LeftColumn = loadable(() => import("../components/leftColumn"));
 const Presentation = loadable(() => import("../components/presentation"));
 const Toolkit = loadable(() => import("../components/toolkit"));
 const Projects = loadable(() => import("../components/projects"));
 const Certificates = loadable(() => import("../components/certificates.js"));
+const MainNavigation = loadable(() =>
+  import("../components/layout/MainNavigation.js")
+);
+
+const sections = {
+  presentation: { icon: BsPersonCircle },
+  toolkit: { icon: BsTools },
+  projects: { icon: BsFiles },
+  certificates: { icon: BsStar },
+};
 
 function HomePage(props) {
+  const [visibleContent, setVisibleContent] = React.useState("presentation");
+
   const parRef = React.useRef(null);
+
+  let content;
+  switch (visibleContent) {
+    case "presentation":
+      content = (
+        <Flex
+          color="white"
+          justifySelf="center"
+          minHeight="70vh"
+          direction={["column", null, "row"]}
+          mb={5}
+        >
+          <LeftColumn
+            inViewOptions={{
+              threshold: 0.3,
+              rootMargin: "0px",
+              root: parRef?.current,
+            }}
+          />
+          <Presentation />
+        </Flex>
+      );
+      break;
+    case "toolkit":
+      content = (
+        <Toolkit
+          tools={props.toolkit}
+          inViewOptions={{
+            threshold: 0.15,
+            rootMargin: "0px",
+            root: parRef?.current,
+            // triggerOnce: true,
+          }}
+        />
+      );
+      break;
+    case "projects":
+      content = (
+        <Projects
+          projects={props.projects}
+          inViewOptions={{
+            threshold: 0.15,
+            rootMargin: "0px",
+            root: parRef?.current,
+          }}
+        />
+      );
+      break;
+    case "certificates":
+      content = <Certificates />;
+      break;
+    default:
+  }
+
   return (
     <React.Fragment>
       <Head>
@@ -20,42 +88,16 @@ function HomePage(props) {
         <meta name="description" content="Pavel Yarakhovich personal page." />
       </Head>
 
-      <Flex
-        color="white"
-        justifySelf="center"
-        minHeight="70vh"
-        direction={["column", null, "row"]}
-        mb={5}
-      >
-        <LeftColumn
-          inViewOptions={{
-            threshold: 0.3,
-            rootMargin: "0px",
-            root: parRef?.current,
-          }}
+      <Flex flexDirection="row" height="100vh" overflow="hidden" bg="gray.300">
+        <MainNavigation
+          sections={sections}
+          visibleContent={visibleContent}
+          selectContent={setVisibleContent}
         />
-        <Presentation />
+        <Container maxW="container.xl" p={4} h="100%" overflow="auto">
+          {content}
+        </Container>
       </Flex>
-
-      <Toolkit
-        tools={props.toolkit}
-        inViewOptions={{
-          threshold: 0.15,
-          rootMargin: "0px",
-          root: parRef?.current,
-          // triggerOnce: true,
-        }}
-      />
-      <Projects
-        projects={props.projects}
-        inViewOptions={{
-          threshold: 0.15,
-          rootMargin: "0px",
-          root: parRef?.current,
-        }}
-      />
-      <Certificates />
-
     </React.Fragment>
   );
 }

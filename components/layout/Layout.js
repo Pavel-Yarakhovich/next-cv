@@ -14,12 +14,7 @@ function Layout(props) {
         ></link>
       </Head>
 
-      <Flex flexDirection="column" minHeight="100vh" bg="gray.300">
-        <MainNavigation />
-        <Container maxW="container.xl" p={4} h="100%">
-          {props.children}
-        </Container>
-      </Flex>
+      {props.children}
     </Fragment>
   );
 }
