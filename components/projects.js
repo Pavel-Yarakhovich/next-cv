@@ -32,14 +32,12 @@ function Projects({ projects = mockProjects, inViewOptions }) {
           Projects
         </Text>
         <Flex direction="column">
-          <Box w="100%" pr={[0, null, 4]} mb="1.5rem">
-            <ActiveProject project={activeProject} />
-          </Box>
           <Flex
             direction="row"
             flexWrap="wrap"
             justifyContent="start"
             position="relative"
+            mb="1.5rem"
           >
             {projects.map((item, idx) => (
               <Project
@@ -50,6 +48,10 @@ function Projects({ projects = mockProjects, inViewOptions }) {
               />
             ))}
           </Flex>
+
+          <Box w="100%" pr={[0, null, 4]}>
+            <ActiveProject project={activeProject} />
+          </Box>
         </Flex>
       </Flex>
     </SlideFade>

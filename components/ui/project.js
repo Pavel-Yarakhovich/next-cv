@@ -3,7 +3,7 @@ import { Box, Avatar, Text, Flex, Tooltip } from "@chakra-ui/react";
 
 function Project(props) {
   return (
-    <Box w={["100%", "50%", "33%", "25%"]} p={2}>
+    <Box w={["100%", "50%", "33%", "25%"]} p="0 1rem 1rem 0">
       <Box
         bgGradient={
           props.isActive
